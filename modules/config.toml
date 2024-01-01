@@ -1,0 +1,96 @@
+font-size = "10pt"
+spacing = 1.75
+
+[colors]
+# GitHub's Primer Design System
+# https://github.com/primer/primitives/blob/main/data/colors/vars/global_light.ts
+
+[colors.fg]
+default = "#1f2328"
+muted = "#656d76"
+subtle = "#6e7781"
+red = "#d1242f"
+green = "#1a7f37"
+blue = "#0969da"
+orange = "#bc4c00"
+yellow = "#9a6700"
+purple = "#8250df"
+magenta = "#bf3989"
+on-emphasis = "#ffffff"
+
+[colors.bg]
+default = "#ffffff"
+subtle = "#f6f8fa"
+emphasis = "#24292f"
+red = "#ffebe9"
+red-emphasis = "#cf222e"
+green = "#dafbe1"
+green-emphasis = "#1f883d"
+blue = "#ddf4ff"
+blue-emphasis = "#0969da"
+orange = "#fff1e5"
+orange-emphasis = "#bc4c00"
+yellow = "#fff8c5"
+yellow-emphasis = "#9a6700"
+purple = "#fbefff"
+purple-emphasis = "#8250df"
+magenta = "#ffeff7"
+magenta-emphasis = "#bf3989"
+transparent = "#00000000"
+
+[colors.border]
+default = "#d0d7de"
+muted = "#d8dee4"
+subtle = "#1f232826"
+red = "#ff818266"
+red-emphasis = "#cf222e"
+green = "#4ac26b66"
+green-emphasis = "#1f883d"
+blue = "#54aeff66"
+blue-emphasis = "#0969da"
+orange = "#fb8f4466"
+orange-emphasis = "#bc4c00"
+yellow = "#d4a72c66"
+yellow-emphasis = "#9a6700"
+purple = "#c297ff66"
+purple-emphasis = "#8250df"
+magenta = "#ff80c866"
+magenta-emphasis = "#bf3989"
+
+[fonts]
+normal = [
+  "New Computer Modern",
+  "Noto Serif CJK SC",
+  "Noto Serif CJK HK",
+  "Apple Color Emoji",
+]
+italic = [
+  "New Computer Modern",
+  "AR PL UKai",
+  "AR PL UKai HK",
+  "Apple Color Emoji",
+]
+strong = [
+  "New Computer Modern",
+  "Noto Sans CJK SC",
+  "Noto Sans CJK HK",
+  "Apple Color Emoji",
+]
+math = [
+  "New Computer Modern Math",
+  "Noto Serif CJK SC",
+  "Noto Serif CJK HK",
+  "Apple Color Emoji",
+]
+sans = [
+  "New Computer Modern Sans",
+  "Noto Sans CJK SC",
+  "Noto Sans CJK HK",
+  "Apple Color Emoji",
+]
+mono = [
+  "Hack Nerd Font",
+  "PingFang SC",
+  "PingFang HC",
+  "Apple Color Emoji",
+]

@@ -1,3 +1,5 @@
+#import "../config.typ": config
+
 /// Check if the given value is defined.
 ///
 /// @param v any
@@ -11,5 +13,11 @@
 /// @param s content
 /// @return content
 #let hphantom(s) = { hide(box(height: 0em, s)) }
+
+/// Root em, like html rem
+///
+/// @param n integer
+/// @return length
+#let rem(n) = { n * config.font-size }
 
 /* vim: set ft=typst: */
