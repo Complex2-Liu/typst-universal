@@ -44,6 +44,7 @@
 // For example, convert string "10pt" to length, convert "#000000" to color
 #{
   config.font-size = eval(config.font-size)
+  config.spacing = config.spacing * config.font-size
 }
 
 /* vim: set ft=typst: */
