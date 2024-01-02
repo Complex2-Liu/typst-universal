@@ -8,6 +8,10 @@
 
 #pagebreak()
 
+#include "numbering.typ"
+
+#pagebreak()
+
 #include "body.typ"
 
 #pagebreak()
