@@ -1,6 +1,6 @@
 #import "../config.typ": config
 #import "../fonts.typ": fonts
-#import "../utils.typ": has, rem
+#import "../utils.typ": has, rem, hashstep, attach-hash
 
 // Math Environments
 
@@ -55,14 +55,17 @@
 /// @param style? "plain"
 /// @param spacing? length
 /// @param desp? content
+/// @param hash? string 7-digit SHA256 hash
 #let mathenv(
   body, name: "Theorem", style: "plain",
-  spacing: config.spacing, desp: none
+  spacing: config.spacing, desp: none, hash: none
   ) = {
   counter("mathenv").step()
+  if has(hash) { hashstep(hash) }
 
   if style == "plain" {
     block(above: spacing, below: spacing, width: 100%)[
+      #if has(hash) { attach-hash }
       #mathenv-title(name: name, desp: desp)
       #body
     ]

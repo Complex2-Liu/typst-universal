@@ -1,4 +1,6 @@
 #import "../config.typ": config
+#import "../fonts.typ": fonts
+#import "../colors.typ": colors
 
 /// Check if the given value is defined.
 ///
@@ -37,6 +39,26 @@
   }
 
   return a.map(str).join(".")
+}
+
+/// Update the hash state with the given string.
+///
+/// @param s string
+/// @return none
+#let hashstep(s) = {
+  state("hash").update(s)
+}
+
+#let mathenv-hash-numbering(v) = {
+  set text(font: fonts.mono, size: rem(0.8))
+  place(
+    right + top, dx: rem(5.2),
+    "(" + text(fill: colors.fg.green, state("hash").display()) + ")"
+  )
+}
+
+#let attach-hash = {
+  state("hash").display(mathenv-hash-numbering)
 }
 
 /* vim: set ft=typst: */

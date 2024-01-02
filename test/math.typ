@@ -6,9 +6,7 @@
 
 = Heading Level 1 一级标题
 
-#lorem(30)
-
-#mathenv()[
+#mathenv(hash: "c8170cb")[
   Every bounded entire function must be constant.
 ] <c8170cb>
 
@@ -32,7 +30,7 @@
 
 #lorem(30)
 
-#mathenv(name: "Proposition")[
+#mathenv(name: "Proposition", hash: "453e95c")[
   Every bounded entire function must be constant.
 ] <453e95c>
 
