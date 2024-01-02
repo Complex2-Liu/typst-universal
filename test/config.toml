@@ -1,1 +1,4 @@
 font-size = "11pt"
+
+[math]
+counter-level = 3

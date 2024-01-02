@@ -4,6 +4,9 @@ spacing = 1.75
 [heading]
 size = [ 1.5, 1.25, 1.0 ]
 
+[math]
+counter-level = 1
+
 [colors]
 # GitHub's Primer Design System
 # https://github.com/primer/primitives/blob/main/data/colors/vars/global_light.ts
