@@ -61,4 +61,24 @@
   state("hash").display(mathenv-hash-numbering)
 }
 
+/// Stable mark
+///
+/// @return content
+#let stable-mark = {
+  let palette = ()
+  for i in color.map.rainbow {
+    palette.push(i.darken(6%))
+  }
+
+  place(
+    dx: rem(-4.8), dy: rem(0.1),
+    box(
+      fill: gradient.linear(..palette, angle: 135deg),
+      radius: 6pt,
+      outset: (x: 6pt, y:4pt),
+      text(font: fonts.sans, fill: white, weight: 800, rem(0.9))[Stable]
+    )
+  )
+}
+
 /* vim: set ft=typst: */

@@ -5,6 +5,7 @@
 #import "src/utils.typ": mathenv-hash-numbering
 #import "src/utils.typ": hashstep
 #import "src/utils.typ": attach-hash
+#import "src/utils.typ": stable-mark
 
 #import "src/config.typ": deep-merge
 

@@ -1,11 +1,16 @@
 #import "lib/config.typ": config
 #import "lib/math.typ": mathenv, proof, subproof, solution, note
 #import "lib/math.typ": cref
+#import "lib/utils.typ": stable-mark
+
+#set block(above: config.spacing, below: config.spacing)
+#show heading: set block(below: config.spacing)
 
 尝试将 `math.counter-level` 修改为 0, 1, 2, 3, 检查 `counter` 是否正确显示.
 
 = Heading Level 1 一级标题
 
+#stable-mark
 #mathenv(hash: "c8170cb")[
   Every bounded entire function must be constant.
 ] <c8170cb>
@@ -16,6 +21,7 @@
 
 #lorem(30)
 
+#stable-mark
 #mathenv(desp: [Liouville's Theorem])[
   Every bounded entire function must be constant.
 ] <0cbf7c5>
@@ -30,6 +36,7 @@
 
 #lorem(30)
 
+#stable-mark
 #mathenv(name: "Proposition", hash: "453e95c")[
   Every bounded entire function must be constant.
 ] <453e95c>
