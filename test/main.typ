@@ -12,6 +12,10 @@
 
 #pagebreak()
 
+#include "heading.typ"
+
+#pagebreak()
+
 #include "body.typ"
 
 #pagebreak()
