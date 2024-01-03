@@ -131,4 +131,46 @@
   }
 }
 
+/// Equation reference.
+///
+#let eqref(target, hash: false, ..args) = {
+  import "../colors.typ": blue
+  import "../utils.typ": fixed-length-numbering
+
+  let supplement = args.pos().at(0, default: none)
+  if has(supplement) { supplement = supplement + " " }
+
+  if hash {
+    show link: set text(font: fonts.mono, fill: blue, size: rem(0.8))
+    supplement + link(label(target), target)
+  } else {
+    locate(loc => {
+      let level = config.math.counter-level
+      let elem = query(label(target), loc)
+      let loc = elem.first().location()
+      let arr = counter(heading).at(loc)
+      let c = fixed-length-numbering.with(len: level - 1)(..arr)
+      if level > 1 { c = c + "." }
+      c = c + str(counter(math.equation).at(loc).first())
+
+      show link: set text(fill: blue)
+      supplement + link(label(target), c)
+    })
+  }
+}
+
+#import "../utils.typ": eq-numbering, hash-eq-numbering
+
+#let numbeq(body) = {
+  math.equation(block: true, numbering: eq-numbering, body)
+}
+
+#let hasheq(hash: none, body) = {
+  if not has(hash) { panic("hash is required") }
+  hashstep(hash)
+  math.equation(block: true, numbering: hash-eq-numbering, body)
+  counter(math.equation).update(n => n - 1)
+}
+
+
 /* vim: set ft=typst: */

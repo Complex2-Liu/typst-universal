@@ -41,6 +41,23 @@
   return a.map(str).join(".")
 }
 
+/// Normal equation numbering
+#let eq-numbering(..nums) = {
+  let c = "("
+  let a = nums.pos()
+  let level = config.math.counter-level
+
+  c = c + locate(loc => {
+    let arr = counter(heading).at(loc)
+    fixed-length-numbering.with(len: level - 1)(..arr)
+  })
+
+  if level > 1 { c = c + "." }
+  c = c + str(a.first()) + ")"
+
+  c
+}
+
 /// Update the hash state with the given string.
 ///
 /// @param s string
@@ -59,6 +76,16 @@
 
 #let attach-hash = {
   state("hash").display(mathenv-hash-numbering)
+}
+
+/// Hash equation numbering
+#let hash-eq-numbering(..nums) = {
+  set text(font: fonts.mono, size: rem(0.8))
+  place(
+    // See https://github.com/typst/typst/discussions/3106
+    right + horizon, dx: rem(5.2), dy: rem(-0.1),
+    "(" + text(fill: colors.fg.green, state("hash").display()) + ")"
+  )
 }
 
 /// Stable mark

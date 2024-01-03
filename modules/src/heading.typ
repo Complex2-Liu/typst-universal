@@ -8,21 +8,30 @@
 
 
   show heading.where(level: 1): it => {
-    if level > 1 { counter("mathenv").update(0) }
+    if level > 1 {
+      counter("mathenv").update(0)
+      counter(math.equation).update(0)
+    }
     set text(size: rem(size.at(0)))
 
     it
   }
 
   show heading.where(level: 2): it => {
-    if level > 2 { counter("mathenv").update(0) }
+    if level > 2 {
+      counter("mathenv").update(0)
+      counter(math.equation).update(0)
+    }
     set text(size: rem(size.at(1)))
 
     it
   }
 
   show heading.where(level: 3): it => {
-    if level > 3 { counter("mathenv").update(0) }
+    if level > 3 {
+      counter("mathenv").update(0)
+      counter(math.equation).update(0)
+    }
     set text(size: rem(size.at(2)))
 
     it

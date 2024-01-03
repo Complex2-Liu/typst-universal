@@ -16,6 +16,10 @@
 
 #pagebreak()
 
+#include "equation.typ"
+
+#pagebreak()
+
 #include "math.typ"
 
 #pagebreak()
