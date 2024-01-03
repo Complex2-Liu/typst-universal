@@ -45,6 +45,12 @@
 #{
   config.font-size = eval(config.font-size)
   config.spacing = config.spacing * config.font-size
+
+  // document
+  config.document.title = eval(config.document.title, mode: "markup")
+  if config.document.date == "none" or config.document.date == "auto" {
+    config.document.date = eval(config.document.date)
+  }
 }
 
 /* vim: set ft=typst: */
