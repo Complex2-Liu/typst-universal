@@ -3,7 +3,6 @@
 #import "lib/utils.typ": stable-mark
 
 #set block(above: config.spacing, below: config.spacing)
-#show heading: set block(below: config.spacing)
 
 = Heading Level 1
 

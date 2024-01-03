@@ -4,7 +4,6 @@
 #import "lib/utils.typ": stable-mark
 
 #set block(above: config.spacing, below: config.spacing)
-#show heading: set block(below: config.spacing)
 
 尝试将 `math.counter-level` 修改为 0, 1, 2, 3, 检查 `counter` 是否正确显示.
 

@@ -41,6 +41,9 @@
     font: fonts.strong,
     weight: 575,
   )
+  show heading: set block(
+    above: config.spacing + rem(0.5), below: config.spacing
+  )
 
   set heading(numbering: "1.1")
   doc
