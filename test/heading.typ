@@ -6,44 +6,36 @@
 ]
 
 #lorem(20)
-#counter(heading).display()
 
 == Heading Level 2
 
 #lorem(20)
-#counter(heading).display()
 
 #hashheading(hash: "0194d98", level: 2)[
   Heading Level 2 二级标题
 ]
 
 #lorem(20)
-#counter(heading).display()
 
 === Heading Level 3
 
 #lorem(20)
-#counter(heading).display()
 
 == Heading Level 2
 
 #lorem(20)
-#counter(heading).display()
 
 = Heading Level 1 一级标题
 
 #lorem(20)
-#counter(heading).display()
 
 == Heading Level 2
 
 #lorem(20)
-#counter(heading).display()
 
 === Heading Level 3
 
 #lorem(20)
-#counter(heading).display()
 
 === Heading Level 3 三级标题
 
@@ -64,6 +56,5 @@
 === Heading Level 3
 
 #lorem(20)
-#counter(heading).display()
 
 /* vim: set ft=typst: */
