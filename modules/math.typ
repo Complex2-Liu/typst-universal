@@ -7,5 +7,6 @@
 #import "src/math.typ": note
 #import "src/math.typ": numbeq
 #import "src/math.typ": hasheq
+#import "src/heading.typ": hashheading
 
 /* vim: set ft=typst: */

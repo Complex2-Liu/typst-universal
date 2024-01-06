@@ -1,6 +1,9 @@
 #import "lib/utils.typ": fixed-length-numbering
+#import "lib/math.typ": hashheading
 
-= Headling Level 1
+#hashheading(hash: "f18411a")[
+  Heading Level 1
+]
 
 #lorem(20)
 #counter(heading).display()
@@ -10,7 +13,9 @@
 #lorem(20)
 #counter(heading).display()
 
-== Heading Level 2 二级标题
+#hashheading(hash: "0194d98", level: 2)[
+  Heading Level 2 二级标题
+]
 
 #lorem(20)
 #counter(heading).display()

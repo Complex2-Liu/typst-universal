@@ -1,7 +1,16 @@
 #import "../config.typ": config
 #import "../fonts.typ": fonts
-#import "../utils.typ": rem
+#import "../utils.typ": rem, hashstep, attach-hash
 #import "../colors.typ": colors
+
+#let hashheading(hash: none, level: 1, body) = {
+  hashstep(hash)
+  // Here we must apply a block to the heading again...
+  block(
+    above: config.spacing + rem(0.5), below: config.spacing,
+    attach-hash + heading(level: level, body),
+  )
+}
 
 #let heading_setup(doc) = {
   let size = config.heading.size
