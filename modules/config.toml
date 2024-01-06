@@ -18,6 +18,9 @@ date = "none"
 
 [heading]
 size = [ 1.5, 1.25, 1.0 ]
+underline = true
+section-symbol = true
+counter-level = 2
 
 [math]
 counter-level = 1

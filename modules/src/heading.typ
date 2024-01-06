@@ -1,34 +1,72 @@
 #import "../config.typ": config
 #import "../fonts.typ": fonts
 #import "../utils.typ": rem
+#import "../colors.typ": colors
 
 #let heading_setup(doc) = {
   let size = config.heading.size
-  let level = config.math.counter-level
+  let head-level = config.heading.counter-level
+  let math-level = config.math.counter-level
+  let stroke = (:)
+  let inset = (:)
+  let prefix1 = ""
+  let prefix2 = ""
+
+
+  if config.heading.underline {
+    stroke = (bottom: 1pt + colors.border.muted)
+    inset = (bottom: 0.3em)
+  }
+  if config.heading.section-symbol {
+    prefix1 = text(size: 1.2em, sym.section)
+    prefix2 = text(
+      size: 1.2em, box(inset: (right: rem(-0.25)), sym.section) + sym.section,
+    )
+  }
 
 
   show heading.where(level: 1): it => {
-    if level > 1 {
+    if math-level > 1 {
       counter("mathenv").update(0)
       counter(math.equation).update(0)
     }
+    let prefix3 = " "
+    if head-level >= 1 {
+      prefix3 = counter(heading).display() + ". "
+    }
+
     set text(size: rem(size.at(0)))
 
-    it
+    block(
+      width: 100%, above: config.spacing + rem(0.5), below: config.spacing,
+      stroke: stroke,
+      inset: inset,
+      prefix1 + sym.space.med + prefix3 + it.body
+    )
   }
 
   show heading.where(level: 2): it => {
-    if level > 2 {
+    if math-level > 2 {
       counter("mathenv").update(0)
       counter(math.equation).update(0)
     }
+    let prefix4 = " "
+    if head-level >= 2 {
+      prefix4 = counter(heading).display() + ". "
+    }
+
     set text(size: rem(size.at(1)))
 
-    it
+    block(
+      width: 100%, above: config.spacing + rem(0.5), below: config.spacing,
+      stroke: stroke,
+      inset: inset,
+      prefix2 + sym.space.med + prefix4 + it.body
+    )
   }
 
   show heading.where(level: 3): it => {
-    if level > 3 {
+    if math-level > 3 {
       counter("mathenv").update(0)
       counter(math.equation).update(0)
     }
